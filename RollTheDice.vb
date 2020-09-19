@@ -1,7 +1,8 @@
 ﻿'Calvin Coxen
 'RCET0265
 'Fall 2020
-'Roll The Die
+'Roll The Dice
+'https://github.com/CalvinAC/RollTheDice
 
 
 Option Explicit On
@@ -15,12 +16,14 @@ Module RollTheDice
         Dim rolls(12) As Integer
         Dim row As Integer
 
+        Console.WriteLine("Press enter to roll two dice 1000 times, Press Q to quit")
+
+
         If Console.ReadKey().Key = ConsoleKey.Q Then
             Exit Sub
         End If
 
         Do
-            Console.WriteLine("Roll Of The Die")
 
 
             For i = 1 To 1000
@@ -33,8 +36,10 @@ Module RollTheDice
                 Console.Write(rolls(i) & "|" & vbTab)
             Next
 
-            Console.ReadLine()
-            Console.Clear()
+
+
+            Console.WriteLine(vbNewLine)
+            Console.WriteLine("Press enter to roll the dice again or press Q to quit")
 
             If Console.ReadKey().Key = ConsoleKey.Q Then
                 Exit Sub
@@ -42,7 +47,6 @@ Module RollTheDice
 
             Erase rolls
             ReDim rolls(12)
-
         Loop
     End Sub
 
