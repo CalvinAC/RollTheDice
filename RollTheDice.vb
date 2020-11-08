@@ -4,10 +4,8 @@
 'Roll The Dice
 'https://github.com/CalvinAC/RollTheDice
 
-
 Option Explicit On
 Option Strict On
-
 
 Module RollTheDice
 
@@ -26,7 +24,7 @@ Module RollTheDice
         'generates a random number between 2 and 12 1000 times and 
         'displays the amount of rolls per value
         Do
-            Console.WriteLine("  2      3       4       5       6       7       8       9       10      11      12")
+            Console.WriteLine("  2      3       4       5       6       7       8       9       10      11      12") 'use pad left or pad right - TJR
 
             For i = 1 To 1000
                 dieRoll = GetRandomNumber(1, 11)
@@ -37,8 +35,6 @@ Module RollTheDice
             For i = 2 To 12
                 Console.Write("|" & rolls(i) & "|" & vbTab)
             Next
-
-
 
             Console.WriteLine(vbNewLine)
             Console.WriteLine("Press enter to roll the dice again or press Q to quit")
